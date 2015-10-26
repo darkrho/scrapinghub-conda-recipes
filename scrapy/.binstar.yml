@@ -1,0 +1,28 @@
+package: scrapy
+user: scrapinghub
+
+platform:
+  - linux-64
+  # XXX: We don't have build workers for the platforms below, yet.
+  # - linux-32
+  # - osx-64
+  # - win-32
+  # - win-64
+
+engine:
+  - python=2
+
+install:
+  - conda config --add channels scrapinghub
+  - conda config --set always_yes true
+
+script:
+  - conda build .
+
+build_targets:
+  - conda
+
+notifications:
+  email:
+    recipients: ['opensource@scrapinghub.com']
+
