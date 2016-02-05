@@ -21,10 +21,11 @@ if [ -z "${BUILD_OUTPUT:-}" ]; then
   exit 1
 fi
 
-# TODO: Only upload packages that need to be uploaded. We could use the
-# --interactive flag but it may ask to register a package or to replace it, so
-# no single question.
 echo "Uploading packages to $ANACONDA_USER/$ANACONDA_LABEL"
 for TARBALL in $BUILD_OUTPUT/{linux,win,osx}-*/*.tar.bz2; do
-  anaconda -t $ANACONDA_TOKEN upload --register --force -u $ANACONDA_USER -c $ANACONDA_LABEL $TARBALL
+  # Say no to replacing existing package. However, the question could be about
+  # creating the package record. In such case, we must explicitly create the
+  # package with: anaconda package USERNAME/PACKAGE
+  # and rerun the build.
+  yes n | anaconda -t $ANACONDA_TOKEN upload --interactive -u $ANACONDA_USER -c $ANACONDA_LABEL $TARBALL
 done
