@@ -1,11 +1,11 @@
 package:
   name: scrapy
-  version: "1.0.5"
+  version: "1.1.0rc1"
 
 source:
-  fn: Scrapy-1.0.5.tar.gz
-  url: https://pypi.python.org/packages/source/S/Scrapy/Scrapy-1.0.5.tar.gz
-  md5: b8483fbed91730d30fdf747b2cca8780
+  fn: Scrapy-1.1.0rc1.tar.gz
+  url: https://pypi.python.org/packages/source/S/Scrapy/Scrapy-1.1.0rc1.tar.gz
+  md5: 79dad4579baf08589d3c69bba611328b
 
 build:
   entry_points:
@@ -23,6 +23,8 @@ requirements:
     - pyopenssl
     - cssselect >=0.9
     - six >=1.5.2
+    - parsel >=0.9.3
+    - pydispatcher >=2.0.5
     - service_identity
     - pywin32  [win]
 
@@ -35,6 +37,8 @@ requirements:
     - pyopenssl
     - cssselect >=0.9
     - six >=1.5.2
+    - parsel >=0.9.3
+    - pydispatcher >=2.0.5
     - service_identity
     - pywin32  [win]
 
