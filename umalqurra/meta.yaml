@@ -1,0 +1,61 @@
+package:
+  name: umalqurra
+  version: "0.2"
+
+source:
+  fn: umalqurra-0.2.tar.gz
+  url: https://pypi.python.org/packages/source/u/umalqurra/umalqurra-0.2.tar.gz
+  md5: 3b9ed27f31782db8c716585ca76a1457
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # noarch_python: True
+  # preserve_egg_dir: True
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - umalqurra = umalqurra:main
+    #
+    # Would create an entry point called umalqurra that calls umalqurra.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  # Python imports
+  imports:
+    - umalqurra
+
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/tytkal/python-hijiri-ummalqura
+  license: Waqef
+  summary: 'Date Api that support Hijri Umalqurra calendar. Features: 1-Convert Gregorian to Hijri 2-Convert Hijri to Gregorian 3-give the arabic name of the hijri month 4-give the english name of the gregorian month 5-give the day name in Arabic and English 6-give the current day both in Hijri and Gregorian'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
