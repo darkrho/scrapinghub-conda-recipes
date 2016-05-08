@@ -10,7 +10,6 @@ source:
     - ruamel-yaml-compat.patch
 
 build:
-  skip: True  # [py3k]
   entry_points:
     - shub-image = shub_image.tool:cli
   number: 0
