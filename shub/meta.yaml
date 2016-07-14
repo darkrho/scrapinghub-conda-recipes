@@ -1,11 +1,11 @@
 package:
   name: shub
-  version: "2.1.1"
+  version: "2.2.0"
 
 source:
-  fn: shub-2.1.1.tar.gz
-  url: https://pypi.python.org/packages/ca/2f/344c75a43cae26fe6822d8e477d06940f45dffbd4cf880081221a6607f9c/shub-2.1.1.tar.gz
-  md5: 1a8dd60c6a4dc571b43e8e2320a468b0
+  fn: shub-2.2.0.tar.gz
+  url: https://pypi.python.org/packages/0dc/aef4d8416685f0acc06e7bdbeed5130a5dcba16cbae363a19e72c7e496e0/shub-2.2.0.tar.gz
+  md5: e3410b87bb044f9dd2a69006f6ea07b2
   patches:
     # We use anaconda's ruamel_yaml and provide a compatiblity patch.
     - ruamel-yaml-compat.patch
